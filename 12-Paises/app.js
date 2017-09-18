@@ -5,17 +5,16 @@ var countries = '[{ "code": "CO", "name": "Colombia", "flag_url": "https://s3.am
 
 $(".wrapper").on("click", function(){
 	var response = $.parseJSON(countries);
-	$(".wrapper").append("<table border='1'><tr><th>Code</th><th>Name</th><th>Flag</th></tr></table>")
-    $.each(response, function(i, item) {
-        var tr = $('<tr>').append(
-        	$('<td>').text(item.code),
-            $('<td>').text(item.name),
-            $('<td><img src="'+ item.flag_url +'">')
-        );
-        console.log(tr.html());
-        // $tr.wrap('.wrapper').html();
-        $(".wrapper").append(tr)
-        $(".wrapper button").hide()
+  var $table = $('<table></table>');
+	$table.append("<tr><th>Code</th><th>Name</th><th>Flag</th></tr>")
+  $.each(response, function(i, item) {
+      var tr = $('<tr>').append(
+        $('<td>').text(item.code),
+          $('<td>').text(item.name),
+          $('<td><img src="'+ item.flag_url +'">')
+      ); 
+      $table.append(tr);
     });
+    $(".wrapper").append($table)
+    $(".wrapper button").hide()
 })
-
