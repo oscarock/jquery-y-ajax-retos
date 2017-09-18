@@ -1,0 +1,22 @@
+h1 { margin-bottom: 60px; }
+
+h3 { 
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.car { margin-bottom: 20px; }
+
+.specs {
+  margin-top: 50px;
+}
+
+.specs .spec-value {
+  color: #666;
+  font-size: 24px;
+}
+
+.specs .spec-label {
+  display: block;
+  color: #999;
+}
