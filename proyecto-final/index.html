@@ -8,18 +8,52 @@
 <body>
   <div class="container">
   	<h2 class="text-center">Picas y Fijas</h2>
+    <br>
+    <h4 class="text-center">Ingresa cuatro digitos diferentes y oprime enter</h4>
   	<div class="row">
-		<div class="col-md-10">
-  			<form action="/taks" method="post" class="form-inline" id="form-1">
-		        <div class="input-group col-sm-10 ml-auto">
-		          <input id="number" type="text" name="title" class="form-control" placeholder="Adivina el Numero" required>
-		        </div>
-		       <!--  <div class="input-group col-sm-3">
-		          <button type="submit" class="btn btn-primary">Guardar Tarea</button>
-		        </div> -->
-	      	</form>
-		</div>	
+  		<div class="center-input col-md-10">
+    			<form method="post" class="form-inline justify-content-center" id="form-1" novalidate>
+  	        <div class="input-group col-sm-10">
+  	          <input id="number" type="number" name="title" class="text-center form-control" placeholder="Adivina el Numero" required>
+              <div class="error-text invalid-feedback"></div>
+  	        </div>
+  		    </form>
+      </div>
+    	<div class="tabla-content col-md-6 ml-auto">
+        <table class="table table-hover" id="tabla-history">
+          <tr>
+            <th>Numero</th>
+            <th>Picas</th>
+            <th>Fijas</th>
+          </tr>
+        </table>
+      </div>
   	</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Mymodal" tabindex="-1" role="dialog" aria-labelledby="Mymodal" aria-hidden="true">
+    
+      <div class="container">
+        <h1 class="text-modal text-center">¡Ganaste!</h1>
+        <button id="btn-play" class="btn-modal btn btn-info">jugar Nuevamente</button>
+      </div>
+      <!-- <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div> -->
+    
   </div>
 
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
